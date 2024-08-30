@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .left-column {
+            grid-column: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-column {
+            grid-column: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .event {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f25f5c;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-right: 15px;
+            width: 60px;
+            text-align: center;
+        }
+
+        .date .month {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .date .day {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .event-info {
+            flex-grow: 1;
+        }
+
+        .event-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .event-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .event-info .duration,
+        .event-info .location {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .badge {
+            background-color: #28a745;
+            color: white;
+            padding: 2px 6px;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .select-category {
+            float: right;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Events</h2>
+        <select class="select-category">
+            <option>Select Category</option>
+        </select>
+        <div class="event-grid">
+            <div class="left-column">
+                <div class="event">
+                    <div class="date">
+                        <span class="month">Mar</span>
+                        <span class="day">26</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Crain's New York Business <span class="badge">Free</span></h3>
+                        <p>Organized by AID MIT</p>
+                        <p class="time">Time: 11:00AM</p>
+                        <p class="duration">Duration: Feb 29 - Mar 2</p>
+                        <p class="location">Place: The Liberty Warehouse, New York</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <span class="month">Feb</span>
+                        <span class="day">21</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Newmarket Nights</h3>
+                        <p>Organized by University of Oxford</p>
+                        <p class="time">Time: 6:00AM</p>
+                        <p class="duration">Duration: 6:00AM - 5:00PM</p>
+                        <p class="location">Place: Cambridge Boat Club, Cambridge</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <span class="month">Dec</span>
+                        <span class="day">16</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Folk Festival</h3>
+                        <p>Organized by Harvard University</p>
+                        <p class="time">Time: 9:00AM</p>
+                        <p class="location">Location: Cambridge Masonic Association</p>
+                        <p>Place: Porter Square, North Cambridge</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="event">
+                    <div class="date">
+                        <span class="month">Feb</span>
+                        <span class="day">29</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Film Festival</h3>
+                        <p>Organized by American Nuclear Society</p>
+                        <p class="time">Time: 11:00AM</p>
+                        <p class="duration">Duration: Feb 29 - Mar 2</p>
+                        <p class="location">Place: Workbar - Central Square, Cambridge</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="date">
+                        <span class="month">Dec</span>
+                        <span class="day">31</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>31st Night Celebration</h3>
+                        <p>Organized by Chamber Music Society</p>
+                        <p class="time">Time: 11:00PM</p>
+                        <p>280 people interested</p>
+                        <p class="location">Place: Tavern on the Green, New York</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
